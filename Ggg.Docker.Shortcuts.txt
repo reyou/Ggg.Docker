@@ -1,0 +1,3 @@
+%userprofile%\.docker
+%userprofile%\AppData\Local\Docker
+%userprofile%\AppData\Local\Docker\log.txt
