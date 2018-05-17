@@ -6,3 +6,8 @@ Options:
   -f, --format string   Format the output using the given Go template
   -s, --size            Display total file sizes if the type is container
       --type string     Return JSON for specified type
+//=============================================================================
+$ docker ps -a
+$ docker inspect 488d1f566572
+Here 488d1f566572 is containerId.
+//=============================================================================

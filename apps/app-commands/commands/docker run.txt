@@ -109,3 +109,9 @@ $ docker run --link some-mongo:mongo -p 8081:8081 mongo-express
 
 Then you can hit http://localhost:8081 or http://host-ip:8081 in your browser. 
 //=============================================================================
+$ docker run ee5fab6c500a
+Here ee5fab6c500a is imageId. 
+This command will create a new container and start it.
+//=============================================================================
+
+//=============================================================================
