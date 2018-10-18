@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+apps/app-docker-basics-dotnet-core/obj/**
+apps/app-docker-basics-dotnet-core/bin/**
