@@ -2,6 +2,7 @@
 # The first instruction must be FROM.
 # The Base Image for our sample is the 2.0-sdk image from the 
 # microsoft/dotnet repository.
+# https://hub.docker.com/r/microsoft/dotnet/
 FROM microsoft/dotnet:2.0-sdk
 
 # The WORKDIR instruction sets the working directory for 
