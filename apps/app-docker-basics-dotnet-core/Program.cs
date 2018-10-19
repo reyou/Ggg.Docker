@@ -6,7 +6,7 @@ namespace app_docker_basics_dotnet_core
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World from Ggg 2.1!");
         }
     }
 }

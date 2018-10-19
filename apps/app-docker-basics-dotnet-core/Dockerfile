@@ -1,9 +1,11 @@
+# https://docs.docker.com/engine/reference/builder/#usage
+# https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
 # The Dockerfile contains Docker build instructions that run sequentially.+
 # The first instruction must be FROM.
 # The Base Image for our sample is the 2.0-sdk image from the 
 # microsoft/dotnet repository.
 # https://hub.docker.com/r/microsoft/dotnet/
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 
 # The WORKDIR instruction sets the working directory for 
 # any remaining RUN, CMD, ENTRYPOINT, COPY, and ADD 
