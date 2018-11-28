@@ -12,8 +12,9 @@ app = Flask(__name__)
 def hello():
     try:
         visits = redis.incr("counter")
-    except RedisError:
-        visits = "<i>cannot connect to Redis, counter disabled</i>"
+    except RedisError as ex:
+        # https://www.programcreek.com/python/example/65603/redis.RedisError
+        visits = "<i>cannot connect to Redis, counter disabled</i>" + " " + "Err: {}".format(ex)
 
     html = "<h3>Hello {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
