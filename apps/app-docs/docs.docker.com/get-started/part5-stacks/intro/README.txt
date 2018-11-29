@@ -42,3 +42,25 @@ oj6krgiqduqt        getstartedlab_web.1          aozdemir/get-started:part2     
 5wjzsnz7x5it        getstartedlab_web.3          aozdemir/get-started:part2        aozdemir-ubuntu     Running             Running 9 minutes ago                       
 orn4hj333nlb        getstartedlab_web.4          aozdemir/get-started:part2        aozdemir-ubuntu     Running             Running 9 minutes ago                       
 c8fj6pvwef3a        getstartedlab_web.5          aozdemir/get-started:part2        aozdemir-ubuntu     Running             Running 9 minutes ago                       
+
+Create a ./data directory for Redis (check in docker-compose.yml):
+
+$ sudo mkdir /home/docker/data
+
+Run docker stack deploy one more time.
+
+$ sudo docker stack deploy -c docker-compose.yml getstartedlab
+
+Run 
+
+$ sudo docker service ls 
+
+to verify that the three services are running as expected.
+
+ID                  NAME                       MODE                REPLICAS            IMAGE                             PORTS
+2lvgbosklkyb        getstartedlab_redis        replicated          1/1                 redis:latest                      *:6379->6379/tcp
+8iznx52jgtug        getstartedlab_visualizer   replicated          1/1                 dockersamples/visualizer:stable   *:8080->8080/tcp
+8jj0sz1dt5a6        getstartedlab_web          replicated          5/5                 aozdemir/get-started:part2        *:80->80/tcp
+
+url: http://localhost/
+url: http://localhost:8080/
