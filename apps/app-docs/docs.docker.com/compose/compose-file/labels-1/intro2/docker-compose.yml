@@ -1,0 +1,6 @@
+version: "3"
+services:
+  web:
+    image: web
+    labels:
+      com.example.description: "This label will appear on all containers for the web service"

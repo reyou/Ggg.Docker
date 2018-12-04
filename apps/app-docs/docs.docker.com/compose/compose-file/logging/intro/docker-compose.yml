@@ -1,0 +1,17 @@
+# https://docs.docker.com/engine/admin/logging/overview/#json-file
+version: '3'
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+      - redis
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"  
+  redis:
+    image: redis
+  db:
+    image: postgres

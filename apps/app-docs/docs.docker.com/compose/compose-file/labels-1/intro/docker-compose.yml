@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    image: web
+    deploy:
+      labels:
+        com.example.description: "This label will appear on the web service"

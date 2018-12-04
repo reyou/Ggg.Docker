@@ -1,0 +1,22 @@
+# https://stackoverflow.com/questions/44290211/docker-compose-v3-the-difference-between-volume-type-mount-and-bind
+version: "3.2"
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - type: volume
+        source: mydata
+        target: /data
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./static
+        target: /opt/app/static
+
+networks:
+  webnet:
+
+volumes:
+  mydata:
